@@ -1,0 +1,4 @@
+site_name: "SharpBlog" 
+site_password: "sharp_blog" 
+foot_left: "@2012 Powered by <a href='https://github.com/liuqiang/sharp_blog'>sharp_blog</a>"
+foot_right: "浙ICP备12009412号"

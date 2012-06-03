@@ -1,0 +1,8 @@
+<% if @posts.empty? -%>
+	<p>There are no posts yet.</p>
+<% else -%>
+<div class="post-list">
+	<%= render @posts %>
+</div>
+	<%= paginate @posts %>
+<% end -%>

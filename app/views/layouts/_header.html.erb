@@ -1,0 +1,21 @@
+<div class="topbar">
+	<div class="topbar-inner">
+		<div class="container">
+      <h3>
+				<%= link_to "Sharp说", root_path %>
+      </h3>
+			<ul class='nav'>
+				<% page_links_for_navigation.each do |link| -%>
+					<li><%= link_to(raw("<span>#{link.name}</span>"), link.url, :class => "link") %></li>
+				<% end -%>
+			</ul>
+			<form method="get" action="http://www.google.com/search" placeholder="Search">
+					<input type="hidden" value="all" name="searchType">
+					<input type="text" autocomplete="off" spellcheck="false" value="" name="keyword" class="i-txt">
+			</form>
+			<ul class="nav secondary-nav">
+			  <li><%= nav_link_to("Login", admin_root_path, :accesskey => '1') %></li>
+			</ul>
+		</div>
+	</div>
+</div>

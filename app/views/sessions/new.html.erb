@@ -1,0 +1,6 @@
+<% if flash[:error] %><p><%= flash[:error] %></p><% end %>
+<%= form_tag(sessions_path) do -%>
+  <h3>请输入管理密码</h3>
+  <p><%= password_field_tag 'login' %></p>
+  <p><%= submit_tag("Login", :class=>'btn') %></p>
+<% end -%>

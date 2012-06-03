@@ -1,0 +1,6 @@
+  <cite><%= comment.author %></cite> says:
+  <br>
+  <small class="commentmetadata date">
+		<%= format_comment_date(comment.created_at) %>
+	</small>
+  <p><%=raw comment.body_html %></p>
