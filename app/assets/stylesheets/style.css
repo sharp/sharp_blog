@@ -17,6 +17,10 @@ h2 {
     font-size: 18px;
     line-height: 24px;
 }
+.navbar .brand {
+    color: #eee;
+    margin-left: -40px;
+}
 .nav > li > a {
     font-size: 14px;
 }
@@ -107,7 +111,7 @@ input, textarea, select, .uneditable-input {
 	width: 100%;
 }
 
-.line {
+.pagination span {
 	border-bottom: 1px dotted #999999;
 	float: left;
 	overflow: hidden;
@@ -149,8 +153,11 @@ a:hover
 	text-decoration: underline;    
 }
 
-#footer a
-{
+#footer{
+	margin-bottom: 10px;
+}
+
+#footer a{
 	color: gray;
 	text-decoration: underline;
 }

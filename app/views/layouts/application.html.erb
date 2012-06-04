@@ -37,7 +37,9 @@
             <ul class="nav">
               <li><%= link_to "Posts", posts_path  %></li>
               <li><%= link_to "Archives", archives_path  %></li>
-							<%- if session[:login] %>
+            </ul>
+						<ul class="nav secondary-nav">
+						  <%- if session[:login] %>
 								<li>
 									<%= link_to 'create post', new_post_path %>
 								</li>
@@ -47,8 +49,7 @@
 							<% else %>
 								<li><%= link_to 'login', new_session_path %></li>
 							<% end %>
-							</li>
-            </ul>
+						</ul>
           </div><!--/.nav-collapse -->
         </div>
       </div>
