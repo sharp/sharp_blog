@@ -8,6 +8,18 @@ body
 	margin: 0px;
 }
 
+h3 {
+    font-size: 15px;
+    line-height: 22px;
+}
+
+h2 {
+    font-size: 18px;
+    line-height: 24px;
+}
+.nav > li > a {
+    font-size: 14px;
+}
 code, pre {
 	background-color: #EEEEEE;
 	margin-bottom: 10px;

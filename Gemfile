@@ -2,7 +2,7 @@ source 'http://ruby.taobao.org/'
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.3'
-#gem 'rake', '0.9.2'
+gem 'rake', '0.9.2.2'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 gem 'hz2py'
 gem 'sqlite3-ruby', :require => 'sqlite3'

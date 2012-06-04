@@ -3,7 +3,7 @@
   <%= javascript_include_tag 'live-comment-preview' %>
 <% end -%>
 
-<h3><%= @post.title -%></h3>
+<h2><%= @post.title -%></h2>
 <%= render "posts/meta", :post => @post %>
 <div class="entrybody">
   <%= raw @post.body %>
