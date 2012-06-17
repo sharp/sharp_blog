@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/bokmann/font-awesome-rails.git
+  revision: ef6a5049e789a127e0c602f8b727533cf9ee05e9
+  specs:
+    font-awesome-rails (0.2.1)
+      railties (~> 3.1)
+
 GEM
   remote: http://ruby.taobao.org/
   remote: https://rubygems.org/
@@ -145,7 +152,7 @@ GEM
     treetop (1.4.10)
       polyglot
       polyglot (>= 0.3.1)
-    twitter-bootstrap-rails (2.0.8)
+    twitter-bootstrap-rails (2.1.0)
       actionpack (>= 3.1)
       less-rails (~> 2.2.2)
       railties (>= 3.1)
@@ -163,6 +170,7 @@ DEPENDENCIES
   capistrano
   carrierwave
   coffee-rails (~> 3.2.1)
+  font-awesome-rails!
   friendly_id
   galetahub-simple_captcha
   hz2py
@@ -179,5 +187,5 @@ DEPENDENCIES
   sass-rails (~> 3.2.3)
   simple_form
   sqlite3-ruby
-  twitter-bootstrap-rails
+  twitter-bootstrap-rails (~> 2.1.0)
   uglifier (>= 1.0.3)

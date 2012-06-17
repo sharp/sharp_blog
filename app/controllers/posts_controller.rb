@@ -3,9 +3,9 @@ class PostsController < ApplicationController
   before_filter :login_required, :except => [:index, :show]
   def index
     if params[:tag]
-      @posts = Post.tagged_with(params[:tag]).order("created_at desc").page(params[:page])
+      @posts = Post.tagged_with(params[:tag]).order("published_at desc").page(params[:page])
     else
-      @posts = Post.order("created_at desc").page(params[:page])
+      @posts = Post.order("published_at desc").page(params[:page])
     end
     respond_to do |format|
       format.html

@@ -162,36 +162,19 @@ a:hover
 	text-decoration: underline;
 }
 
-#footer .left
-{
+#footer .left{
 	float: left;
 }
+
 #footer .right{
 	float: right;
 }
 
-img
-{
-	border: solid 1px black;
+.brand .icon-large, .icon-large{
+    color: #fff;
 }
 
-.clearfix, .container {display:block;}
-.clear {clear:both;}
-
-.separator 
-{
-	height: 1px;
-	margin-top:5px;
-	clear: both;
-}
-
-.alt, .container_alt
-{
-	background-color: #fafafa;
-}
-
-div.date 
-{
+div.date{
 	color: #999;
 	font-size: .8em;
 	background: none repeat scroll 0 0 #75845C;
@@ -200,6 +183,7 @@ div.date
 	padding:5px;
 	width: 100%;
 }
+
 .commentmetadata{
 	color: #bbb;
 }
