@@ -57,7 +57,6 @@ module SharpBlog
     config.assets.version = '1.0'
   end
   ActsAsTaggableOn.remove_unused_tags = true
-  ActsAsTaggableOn.force_parameterize = true
   ActsAsTaggableOn.force_lowercase = true
   ActsAsTaggableOn.delimiter = ' ' # use space as delimiter
 end

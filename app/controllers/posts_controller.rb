@@ -19,7 +19,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find params[:id]
-    @post.update_attribute :views_count, @post.views_count+1 unless session[:logged_in]
+    @post.update_attribute :views_count, @post.views_count+1 unless session[:login]
     @comment = Comment.new
   end
   
