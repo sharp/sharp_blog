@@ -1,0 +1,17 @@
+vendor/bundle/
+config/settings.yml
+public/uploads
+*#*
+*~
+log/**/*
+#*#
+*.swp
+log
+tmp/**/*
+tmp
+.bundle
+*.log
+
+config/settings.local.yml
+config/settings/*.local.yml
+config/environments/*.local.yml

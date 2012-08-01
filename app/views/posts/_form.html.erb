@@ -1,0 +1,8 @@
+<%= simple_form_for @post do |f| %>
+	<%= render 'error_messages', :object => f.object %>
+  <%= f.input :title %>
+  <%= f.input :body, :as => :kindeditor, :input_html => { :width => 630, :height => 420 } %>
+  <%= f.input :published_at %>
+  <%= f.input :tag_list %>
+  <%= f.button :submit, :class=>'btn btn-primary' %>
+<% end %>

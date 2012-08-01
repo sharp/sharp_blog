@@ -1,0 +1,35 @@
+<% content_for(:head) do -%>
+  <%= javascript_include_tag 'common' %>
+  <%= javascript_include_tag 'live-comment-preview' %>
+<% end -%>
+
+<h2><%= @post.title -%></h2>
+<%= render "posts/meta", :post => @post %>
+<div class="entrybody">
+  <%= raw @post.body %>
+</div>
+<ol class="commentlist">
+  <% @post.approved_comments.each do |comment| -%>
+  <li<%=raw cycle(' class="alt"', '') %> id="comment-<%= comment.id %>">
+    <%= render :partial => 'comments/comment', :locals => {:comment => comment} %>
+  </li>
+  <% end -%>
+</ol>
+<br />
+<h3>发表评论</h3>
+	<%= simple_form_for [@post, @comment], :html => {:class=>'form-horizontal'}  do |f| %>
+		<%= render 'posts/error_messages', :object => f.object %>
+    <%= f.input 'author', :label => '昵称' %>
+    <%= f.input 'body', :label => '内容' %>
+		<div class="control-group text required">
+			<label for="comment_body" class="text required control-label"><abbr title="required">*</abbr> 验证码</label>
+			<div class='controls'>
+				<%= show_simple_captcha %>
+			</div>
+		</div>
+		
+    <div class='form-actions'>
+			<%= f.submit "添加评论", :class=>'btn btn-primary', :label => '' %>
+		</div>
+	<% end -%>
+

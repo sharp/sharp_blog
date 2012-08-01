@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8">
+
+  <title><%= enki_config[:title] %> - Admin</title>
+
+  <%= csrf_meta_tag %>
+
+  <%= javascript_include_tag 'jquery.js' %>
+  <%= javascript_include_tag 'jquery.livequery.js' %>
+  <%= javascript_include_tag 'jquery.form.js' %>
+  <%= javascript_include_tag 'jquery.easing.1.3.js' %>
+  <%= javascript_include_tag 'rails.js' %>
+  <%= javascript_include_tag 'humanmsg' %>
+  <%= javascript_include_tag 'admin/shortcut' %>
+  <%= javascript_include_tag 'admin/common', 'wmd/showdown' %>
+
+  <%= stylesheet_link_tag 'bootstrap/bootstrap' %>
+  <%= stylesheet_link_tag 'formtastic' %>
+  <%= stylesheet_link_tag 'humanmsg' %>
+  <%= stylesheet_link_tag 'admin', 'grid', 'forms', 'wmd', 'application' %>
+  <%= yield(:head) %>
+
+  <% if flash[:notice] -%>
+  <script>
+    jQuery(document).ready(function() {
+      humanMsg.displayMsg('<%= escape_javascript(flash[:notice]) %>');
+    })
+  </script>
+  <% end -%>
+
+</head>
+<body>
+	<%= render "layouts/header" %>
+	<br class='clear'>
+	<br class='clear'>
+	<br class='clear'>
+  <div class="container">
+		<div class='row'>
+    	<div class="span12 columns">
+	  		<%= yield %>
+			</div>
+			<div class='span4 columns'>
+				<%= render "admin/shared/slide" %>
+			</div>
+		</div>
+  </div>
+  <%= javascript_include_tag 'wmd/wmd' %>
+</body>
+</html>
