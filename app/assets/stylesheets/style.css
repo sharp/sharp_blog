@@ -135,8 +135,9 @@ input, textarea, select, .uneditable-input {
     width: 100px;
 }
 
-.nav > li > a, a.tag{
-    display: inline
+span.tag a{
+    font-size: 14px;
+    padding: 5px;
 }
 
 li.tags{
