@@ -135,6 +135,10 @@ input, textarea, select, .uneditable-input {
     width: 100px;
 }
 
+.nav > li > a, a.tag{
+    display: inline
+}
+
 li.tags{
     list-style: none;
     margin:10px;

@@ -70,7 +70,10 @@
                 <h3>Tags</h3><br />
                 <ul class="nav nav-list">
 		  <%- Post.tag_counts_on(:tags).each do |tag| %>
-                  <li><%= link_to "#{tag.name} X #{tag.count}", tag_posts_path(tag.name) %></li>
+                  <li class='tags'>
+		    <%= link_to tag.name, tag_posts_path(tag.name), :class => 'tag' %>
+		    x <%= tag.count %>
+		  </li>
 		  <% end -%>
                 </ul>
               </div><!--/.well -->
