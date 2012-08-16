@@ -1,3 +1,4 @@
+.git
 db/development.sqlite3
 vendor/bundle/
 config/settings.yml
