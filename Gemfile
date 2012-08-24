@@ -17,11 +17,12 @@ gem 'capistrano'
 gem 'jquery_datepicker'
 gem "galetahub-simple_captcha", :require => "simple_captcha"
 gem "friendly_id"
+gem 'flash_cookie_session'
 gem 'acts-as-taggable-on', '~> 2.3.1'
 gem "rails_config"
 gem 'simple_form'
 gem 'kaminari'
-gem 'rails_kindeditor', '~> 0.3.0'
+gem 'rails_kindeditor', '~> 0.3.5'
 gem 'json'
 gem 'carrierwave'
 gem 'mini_magick'
