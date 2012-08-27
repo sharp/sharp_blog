@@ -4,8 +4,8 @@
 
 <h2><%= @post.title -%></h2>
 <%= render "posts/meta", :post => @post %>
-<div class="entrybody">
-  <%= raw @post.body %>
+<div class="entrybody markedit-preview toggle-preview">
+  <%= raw BlueCloth.new(@post.body).to_html %>
 </div>
 <ol class="commentlist">
   <% @post.approved_comments.each do |comment| -%>
@@ -14,7 +14,7 @@
   </li>
   <% end -%>
 </ol>
-<br />
+<br /><br />
 <h3>发表评论</h3>
 <%= simple_form_for [@post, @comment], :html => {:class=>'form-horizontal'}  do |f| %>
 <%= render 'posts/error_messages', :object => f.object %>

@@ -2,7 +2,7 @@ class Post < ActiveRecord::Base
 
   acts_as_taggable_on :tags
   
-   paginates_per 20
+  paginates_per 20
 
   has_many                :comments, :dependent => :destroy
   has_many                :approved_comments, :class_name => 'Comment'
@@ -29,6 +29,11 @@ class Post < ActiveRecord::Base
     published_at?
   end
 
+
+  def to_param
+    "#{id}-#{slug.parameterize}"
+  end
+
   class << self
     def build_for_preview(params)
       post = Post.new(params)
@@ -53,10 +58,6 @@ class Post < ActiveRecord::Base
         else
           find(:all, options)
         end
-      end
-
-      def to_param
-        "#{id}-#{slug.parameterize}"
       end
 
       def find_all_grouped_by_month

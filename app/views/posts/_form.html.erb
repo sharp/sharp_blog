@@ -2,7 +2,9 @@
 <script>
   // Create a MarkEdit editor on page load
   $(function(){
-  $('textarea').markedit();
+    $('textarea').markedit({
+      'toolbar' : {'backgroundMode' : 'dark'}
+    });
   });
 </script>
 <style type="text/css">

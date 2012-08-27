@@ -31,7 +31,7 @@ class PostsController < ApplicationController
       respond_to do |format|
         format.html {
           flash[:notice] = "Created post '#{@post.title}'"
-          redirect_to(:action => 'show', :id => @post)
+          redirect_to @post
         }
       end
     else
