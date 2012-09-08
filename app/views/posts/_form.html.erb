@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+<%= simple_form_for @post do |f| %>
+	<%= render 'error_messages', :object => f.object %>
+  <%= f.input :title %>
+  <%= f.input :body, :as => :kindeditor, :input_html => { :width => 630, :height => 420 } %>
+  <%= f.input :published_at %>
+  <%= f.input :tag_list %>
+  <%= f.button :submit, :class=>'btn btn-primary' %>
+<% end %>
+=======
 <%= javascript_include_tag "showdown", "lang/markedit.lang.zh", "jquery.markedit" %>
 <script>
   // Create a MarkEdit editor on page load
@@ -20,3 +30,4 @@
   <%= f.input :tag_list %>
   <%= f.button :submit, :class=>'btn btn-primary' %>
 <% end %>
+>>>>>>> c9d1371d0b302e38beed27b4c85dabed8d8588ed

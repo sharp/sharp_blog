@@ -1,8 +1,14 @@
+<<<<<<< HEAD
+vendor/bundle/
+config/settings.yml
+public/uploads
+=======
 db/development.sqlite3
 vendor/bundle/
 config/settings.yml
 public/uploads
 public/assets
+>>>>>>> c9d1371d0b302e38beed27b4c85dabed8d8588ed
 *#*
 *~
 log/**/*
