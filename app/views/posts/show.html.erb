@@ -1,12 +1,22 @@
+<<<<<<< HEAD
 <% content_for(:head) do -%>
   <%= javascript_include_tag 'common' %>
   <%= javascript_include_tag 'live-comment-preview' %>
+=======
+<% content_for(:title) do -%>
+  <%= "Sharp说 - #{@post.title}" %>
+>>>>>>> c9d1371d0b302e38beed27b4c85dabed8d8588ed
 <% end -%>
 
 <h2><%= @post.title -%></h2>
 <%= render "posts/meta", :post => @post %>
+<<<<<<< HEAD
 <div class="entrybody">
   <%= raw @post.body %>
+=======
+<div class="entrybody markedit-preview toggle-preview">
+  <%= raw BlueCloth.new(@post.body).to_html %>
+>>>>>>> c9d1371d0b302e38beed27b4c85dabed8d8588ed
 </div>
 <ol class="commentlist">
   <% @post.approved_comments.each do |comment| -%>
@@ -15,6 +25,7 @@
   </li>
   <% end -%>
 </ol>
+<<<<<<< HEAD
 <br />
 <h3>发表评论</h3>
 	<%= simple_form_for [@post, @comment], :html => {:class=>'form-horizontal'}  do |f| %>
@@ -32,4 +43,23 @@
 			<%= f.submit "添加评论", :class=>'btn btn-primary', :label => '' %>
 		</div>
 	<% end -%>
+=======
+<br /><br />
+<h3>发表评论</h3>
+<%= simple_form_for [@post, @comment], :html => {:class=>'form-horizontal'}  do |f| %>
+<%= render 'posts/error_messages', :object => f.object %>
+<%= f.input 'author', :label => '昵称' %>
+<%= f.input 'body', :label => '内容' %>
+<div class="control-group text required">
+  <label for="comment_body" class="text required control-label"><abbr title="required">*</abbr> 验证码</label>
+  <div class='controls'>
+    <%= show_simple_captcha %>
+  </div>
+</div>
+
+<div class='form-actions'>
+  <%= f.submit "添加评论", :class=>'btn btn-primary', :label => '' %>
+</div>
+<% end -%>
+>>>>>>> c9d1371d0b302e38beed27b4c85dabed8d8588ed
 
