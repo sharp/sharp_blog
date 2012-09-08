@@ -8,5 +8,5 @@ development:
   <<: *defaults_developmet
 
 production:
-  database: db/sharp_blog.sqlite3
+  database: db/blog.sqlite3
   <<: *defaults_developmet
