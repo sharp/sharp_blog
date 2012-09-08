@@ -7,9 +7,9 @@
 <%= render "posts/meta", :post => @post %>
 
 <div class="entrybody markedit-preview toggle-preview">
-	本文来源于<%= link_to "Sharp说", "http://sharp.bz" %> 请勿转载
   <%= auto_link raw(@post.body_html) %>
-	本文来源于<%= link_to "Sharp说", "http://sharp.bz" %> 请勿转载
+  <br />
+	本文来源于<%= link_to "Sharp说", "http://sharp.bz" %> 转载请注明地址
 </div>
 <br />
 <div class='row'>
