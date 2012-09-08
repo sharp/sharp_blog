@@ -15,7 +15,17 @@
 //
 // Example:
 // @linkColor: #ff0000;
-@media (min-width: 980px) {
+
+@media (min-width: 960px) {
+
+	body { 
+    color: #333;
+    font-family: Helvetica, Tahoma, Arial, sans-serif;
+    line-height: 1.5;
+		font-size: 13px;
+    padding-top: 60px;
+    margin: 0px;
+		}
 	.span12, .container {
 		width: 940px;
 	}
@@ -33,15 +43,30 @@
 	}
 	.container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
 		width: 940px;
-		color: #333;
+		color: #666;
 	}
 	
 	.navbar .navbar-inner, .navbar-fixed-top{
-		background-color: #53C684;
+		background-color: #223;
+	}
+	
+	.navbar .brand {
+	    color: #222;
+	    margin-left: -40px;
 	}
 
-	.container, .navbar-fixed-top .container, .navbar-fixed-bottom .container, page_header .container {
-		width: 960px;
+	.navbar .nav > li > a {
+	    color: #222;
+	    float: none;
+	    font-size: 14px;
+	    cursor: pointer;
+	}
+	
+	.navbar .nav > li > a:hover {
+	    color: #567;
+	    float: none;
+	    font-size: 14px;
+	    cursor: pointer;
 	}
 	
 }

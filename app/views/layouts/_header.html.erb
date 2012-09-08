@@ -1,21 +1,29 @@
-<div class="topbar">
-	<div class="topbar-inner">
-		<div class="container">
-      <h3>
-				<%= link_to "Sharp说", root_path %>
-      </h3>
-			<ul class='nav'>
-				<% page_links_for_navigation.each do |link| -%>
-					<li><%= link_to(raw("<span>#{link.name}</span>"), link.url, :class => "link") %></li>
-				<% end -%>
-			</ul>
-			<form method="get" action="http://www.google.com/search" placeholder="Search">
-					<input type="hidden" value="all" name="searchType">
-					<input type="text" autocomplete="off" spellcheck="false" value="" name="keyword" class="i-txt">
-			</form>
-			<ul class="nav secondary-nav">
-			  <li><%= nav_link_to("Login", admin_root_path, :accesskey => '1') %></li>
-			</ul>
+<div class='container'>
+	<h4>
+		<%= link_to raw(Settings.site_name), root_path, :class => 'brand' %>
+	</h4>
+	<ul class="nav">
+		<li><%= link_to "Posts", posts_path  %></li>
+		<li><%= link_to "Archives", archives_path  %></li>
+		<%- if session[:login] %>
+		<li>
+			<%= link_to 'create post', new_post_path %>
+		</li>
+		<li>
+			<%= link_to 'logout', logout_path %>
+		</li>
+		<% else %>
+		<li><%= link_to 'login', new_session_path %></li>
+		<% end %>
+	</ul>
+	
+	<div class='pull-right'>
+		<!-- JiaThis Button BEGIN -->
+		<div class="jiathis_style">
+			<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt" target="_blank"><img src="http://v3.jiathis.com/code/images/btn/v1/jiathis1.gif" border="0" /></a>
+			<a class="jiathis_counter_style_margin:3px 0 0 2px"></a>
 		</div>
+		<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1334582440841702" charset="utf-8"></script>
+		<!-- JiaThis Button END -->	
 	</div>
 </div>

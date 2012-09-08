@@ -1,49 +1,27 @@
-<<<<<<< HEAD
-<% content_for(:head) do -%>
-  <%= javascript_include_tag 'common' %>
-  <%= javascript_include_tag 'live-comment-preview' %>
-=======
+
 <% content_for(:title) do -%>
   <%= "Sharp说 - #{@post.title}" %>
->>>>>>> c9d1371d0b302e38beed27b4c85dabed8d8588ed
 <% end -%>
 
 <h2><%= @post.title -%></h2>
 <%= render "posts/meta", :post => @post %>
-<<<<<<< HEAD
-<div class="entrybody">
-  <%= raw @post.body %>
-=======
+
 <div class="entrybody markedit-preview toggle-preview">
-  <%= raw BlueCloth.new(@post.body).to_html %>
->>>>>>> c9d1371d0b302e38beed27b4c85dabed8d8588ed
+	本文来源于<%= link_to "Sharp说", "http://sharp.bz" %> 请勿转载
+  <%= auto_link raw(@post.body_html) %>
+	本文来源于<%= link_to "Sharp说", "http://sharp.bz" %> 请勿转载
 </div>
-<ol class="commentlist">
-  <% @post.approved_comments.each do |comment| -%>
-  <li<%=raw cycle(' class="alt"', '') %> id="comment-<%= comment.id %>">
-    <%= render :partial => 'comments/comment', :locals => {:comment => comment} %>
-  </li>
-  <% end -%>
-</ol>
-<<<<<<< HEAD
 <br />
-<h3>发表评论</h3>
-	<%= simple_form_for [@post, @comment], :html => {:class=>'form-horizontal'}  do |f| %>
-		<%= render 'posts/error_messages', :object => f.object %>
-    <%= f.input 'author', :label => '昵称' %>
-    <%= f.input 'body', :label => '内容' %>
-		<div class="control-group text required">
-			<label for="comment_body" class="text required control-label"><abbr title="required">*</abbr> 验证码</label>
-			<div class='controls'>
-				<%= show_simple_captcha %>
-			</div>
-		</div>
-		
-    <div class='form-actions'>
-			<%= f.submit "添加评论", :class=>'btn btn-primary', :label => '' %>
-		</div>
-	<% end -%>
-=======
+<div class='row'>
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt" target="_blank"><img src="http://v3.jiathis.com/code/images/btn/v1/jiathis1.gif" border="0" /></a>
+		<a class="jiathis_counter_style_margin:3px 0 0 2px"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1334582440841702" charset="utf-8"></script>
+	<!-- JiaThis Button END -->	
+</div>
+
 <br /><br />
 <h3>发表评论</h3>
 <%= simple_form_for [@post, @comment], :html => {:class=>'form-horizontal'}  do |f| %>
@@ -61,5 +39,4 @@
   <%= f.submit "添加评论", :class=>'btn btn-primary', :label => '' %>
 </div>
 <% end -%>
->>>>>>> c9d1371d0b302e38beed27b4c85dabed8d8588ed
 

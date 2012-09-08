@@ -1,52 +1,33 @@
 source 'http://ruby.taobao.org/'  
-<<<<<<< HEAD
-source 'https://rubygems.org'
-
-gem 'rails', '3.2.3'
-gem 'rake', '0.9.2.2'
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
-=======
 #source 'https://rubygems.org'
 
 gem 'rails', '3.2.3'
 gem 'rake', '0.9.2.2'
 gem  'bluecloth'
-gem 'markdown-rails'
->>>>>>> c9d1371d0b302e38beed27b4c85dabed8d8588ed
 gem 'hz2py'
 gem 'sqlite3'
 gem 'redcarpet'
 # Use unicorn as the web server
 # gem 'unicorn'
-
+gem 'rails_autolink'
 # Deploy with Capistrano
 gem 'capistrano'
-<<<<<<< HEAD
-
-=======
->>>>>>> c9d1371d0b302e38beed27b4c85dabed8d8588ed
+gem "auto_html"
 # Bundle the extra gems:
 gem 'jquery_datepicker'
 gem "galetahub-simple_captcha", :require => "simple_captcha"
 gem "friendly_id"
-<<<<<<< HEAD
-gem 'acts-as-taggable-on', '~> 2.3.1'
-gem "rails_config"
-gem 'simple_form'
-gem 'kaminari'
-gem 'rails_kindeditor', '~> 0.3.0'
-gem 'json'
-=======
+
 gem 'acts-as-taggable-on', :git => 'git://github.com/mbleigh/acts-as-taggable-on.git'
 gem "rails_config"
 gem 'simple_form'
 gem 'kaminari'
 gem 'rails_kindeditor', '~> 0.3.5'
->>>>>>> c9d1371d0b302e38beed27b4c85dabed8d8588ed
 gem 'carrierwave'
 gem 'mini_magick'
-gem 'twitter-bootstrap-rails', '~> 2.1.0' #, :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
-gem 'font-awesome-rails', :git => "git://github.com/bokmann/font-awesome-rails.git"# Gems used only for assets and not required
+gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+gem 'font-awesome-rails', :git => "git://github.com/bokmann/font-awesome-rails.git"
+# Gems used only for assets and not required
 # in production environments by default.
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

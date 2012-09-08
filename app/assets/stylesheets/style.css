@@ -1,12 +1,4 @@
 /* High level containers */
-body 
-{ 
-    color: #333;
-    font-family: Helvetica, Tahoma, Arial, sans-serif;
-    line-height: 1.5;
-    padding-top: 60px;
-    margin: 0px;
-}
 
 h3 {
     font-size: 15px;
@@ -17,24 +9,7 @@ h2 {
     font-size: 18px;
     line-height: 24px;
 }
-.navbar .brand {
-    color: #eee;
-    margin-left: -40px;
-}
-<<<<<<< HEAD
-.nav > li > a {
-    font-size: 14px;
-}
-=======
 
-.navbar .nav > li > a {
-    color: #eee;
-    float: none;
-    font-size: 14px;
-    cursor: pointer;
-}
-
->>>>>>> c9d1371d0b302e38beed27b4c85dabed8d8588ed
 code, pre {
     background-color: #EEEEEE;
     margin-bottom: 10px;
@@ -91,14 +66,10 @@ div.meta{
     display: inline;
 }
 
-.meta ul li:after
-{
-    content: " | ";
-}
 
 .meta ul li:last-child:after
 {
-    content: "";
+    content: " ";
 }
 input, textarea, select, .uneditable-input {
     color:#222;
@@ -146,14 +117,12 @@ input, textarea, select, .uneditable-input {
     width: 100px;
 }
 
-<<<<<<< HEAD
-=======
 span.tag a{
     font-size: 14px;
     padding: 5px;
 }
 
->>>>>>> c9d1371d0b302e38beed27b4c85dabed8d8588ed
+
 li.tags{
     list-style: none;
     margin:10px;
@@ -214,11 +183,6 @@ div.comments div.meta
 {
     min-height: 0px;
     padding: 0px;
-}
-
-div.comments div.separator
-{
-    height: 10px;
 }
 
 div.errors

@@ -28,16 +28,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(params[:post])
     if @post.save
-      respond_to do |format|
-        format.html {
-          flash[:notice] = "Created post '#{@post.title}'"
-<<<<<<< HEAD
-          redirect_to(:action => 'show', :id => @post)
-=======
-          redirect_to @post
->>>>>>> c9d1371d0b302e38beed27b4c85dabed8d8588ed
-        }
-      end
+      redirect_to @post
     else
       respond_to do |format|
         format.html { render :action => 'new', :status => :unprocessable_entity }
@@ -52,12 +43,7 @@ class PostsController < ApplicationController
   def update
     @post = Post.find params[:id]
     if @post.update_attributes(params[:post])
-      respond_to do |format|
-        format.html {
-          flash[:notice] = "Updated post '#{@post.title}'"
-          redirect_to(:action => 'show', :id => @post)
-        }
-      end
+      redirect_to @post
     else
       respond_to do |format|
         format.html { render :action => 'show', :status => :unprocessable_entity }
