@@ -2,8 +2,9 @@
   <div class='left'><%= raw Settings.foot_left %></div>
   <div class='right'><%= raw Settings.foot_right %></div>
 </div>
-
+<% unless session[:login] %>
 <script type="text/javascript">
 var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
 document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fe3f81b5bd8e3b273b7b37b7d88450128' type='text/javascript'%3E%3C/script%3E"));
 </script>
+<% end %>
