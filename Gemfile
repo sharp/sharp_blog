@@ -1,5 +1,5 @@
-source 'http://ruby.taobao.org/'  
-#source 'https://rubygems.org'
+#source 'http://ruby.taobao.org/'  
+source 'https://rubygems.org'
 
 gem 'rails', '3.2.3'
 gem 'rake', '0.9.2.2'
@@ -7,6 +7,8 @@ gem  'bluecloth'
 gem 'hz2py'
 gem 'sqlite3'
 gem 'redcarpet'
+
+gem 'dynamic_sitemaps'
 # Use unicorn as the web server
 # gem 'unicorn'
 gem 'rails_autolink'

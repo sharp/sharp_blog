@@ -1,4 +1,6 @@
 SharpBlog::Application.routes.draw do
+  match 'sitemap.xml' => 'sitemaps#sitemap'
+
   resources :sessions
   match 'logout', :to => 'sessions#destroy', :as => :logout
   match 'tags/:tag', :to => 'posts#index', :as => :tag_posts

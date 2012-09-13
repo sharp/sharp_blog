@@ -23,7 +23,7 @@ GIT
       therubyracer (~> 0.10.2)
 
 GEM
-  remote: http://ruby.taobao.org/
+  remote: https://rubygems.org/
   specs:
     actionmailer (3.2.3)
       actionpack (= 3.2.3)
@@ -75,6 +75,7 @@ GEM
       execjs
     coffee-script-source (1.3.3)
     commonjs (0.2.6)
+    dynamic_sitemaps (1.0.8)
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
@@ -186,6 +187,7 @@ DEPENDENCIES
   capistrano
   carrierwave
   coffee-rails (~> 3.2.1)
+  dynamic_sitemaps
   font-awesome-rails!
   friendly_id
   galetahub-simple_captcha
