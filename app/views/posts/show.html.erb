@@ -28,8 +28,9 @@
 	document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + new Date().getHours();
 	</script>
 </div>
-
-<br /><br />
+<br />
+<% render @post.comments, :partial => "comments/comment" %>
+<br />
 <h3>发表评论</h3>
 <%= simple_form_for [@post, @comment], :html => {:class=>'form-horizontal'}  do |f| %>
 <%= render 'posts/error_messages', :object => f.object %>
