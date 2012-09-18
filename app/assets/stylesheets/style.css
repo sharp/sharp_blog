@@ -134,8 +134,7 @@ small a, label a
     text-decoration: underline;
 }
 
-a:hover
-{
+a:hover{
     text-decoration: underline;    
 }
 
@@ -161,17 +160,16 @@ a:hover
 }
 
 div.date{
-    color: #999;
+    color: #777;
     font-size: .8em;
     background: none repeat scroll 0 0 #75845C;
-    color: #FFFFFF;
     display: inline;
     padding:5px;
     width: 100%;
 }
 
 .commentmetadata{
-    color: #bbb;
+    color: #999;
 }
 
 div.comments div.body

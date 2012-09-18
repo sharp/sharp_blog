@@ -1,10 +1,10 @@
 class CommentsController < ApplicationController
   include UrlHelper
 
-  before_filter :find_post, :except => [:new]
+  before_filter :find_post, :except => [:new, :index]
 
   def index
-    redirect_to(post_path(@post))
+    @comments = Comment.order("created_at desc").page(params[:page])
   end
 
   def new
@@ -18,10 +18,17 @@ class CommentsController < ApplicationController
   end
 
   def create
-    @comment = Comment.new params[:comment]
-    @comment.post = @post
-    if simple_captcha_valid? and @comment.save
-      redirect_to post_path(@post)
+    if session[:login] or simple_captcha_valid?
+      @comment = Comment.new params[:comment]
+      if @post
+         @comment.post = @post
+         @comment.save
+         redirect_to post_path(@post)
+       else
+         @comment.post_id = 0
+         @comment.save
+        redirect_to comments_path
+      end
     else
       flash[:error] = "Your captcha code is wrong !"
       render :template => 'posts/show'
@@ -31,6 +38,10 @@ class CommentsController < ApplicationController
   protected
 
   def find_post
-    @post = Post.find params[:post_id]
+    if params[:post_id]
+      @post = Post.find params[:post_id]
+    else
+      @post = nil
+    end
   end
 end

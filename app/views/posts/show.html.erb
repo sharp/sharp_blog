@@ -20,7 +20,7 @@
         <a class="bds_tqq"></a>
         <a class="bds_renren"></a>
         <span class="bds_more">更多</span>
-		<a class="shareCount"></a>
+	<a class="shareCount"></a>
     </div>
 	<script type="text/javascript" id="bdshare_js" data="type=tools" ></script>
 	<script type="text/javascript" id="bdshell_js"></script>
@@ -29,7 +29,7 @@
 	</script>
 </div>
 <br />
-<% render @post.comments, :partial => "comments/comment" %>
+<%= render @post.comments, :partial => "comments/comment" %>
 <br />
 <h3>发表评论</h3>
 <%= simple_form_for [@post, @comment], :html => {:class=>'form-horizontal'}  do |f| %>

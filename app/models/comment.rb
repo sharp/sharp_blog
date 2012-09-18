@@ -6,7 +6,7 @@ class Comment < ActiveRecord::Base
   after_save            :denormalize
   after_destroy         :denormalize
 
-  validates_presence_of :author, :body, :post
+  validates_presence_of :author, :body, :post_id
   
   attr_accessible :author, :body, :captcha, :captcha_key
 
@@ -16,7 +16,7 @@ class Comment < ActiveRecord::Base
   end
 
   def denormalize
-    self.post.denormalize_comments_count!
+    self.post.denormalize_comments_count! if self.post
   end
 
   def destroy_with_undo

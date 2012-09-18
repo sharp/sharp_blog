@@ -1,0 +1,22 @@
+<div class='post-list'>
+  <%= render @comments, :partial => "comments/comment" %>
+</div>
+<%= paginate @comments %>
+
+<h3>留言</h3>
+<%= simple_form_for Comment.new, :html => {:class=>'form-horizontal'}  do |f| %>
+<%= render 'posts/error_messages', :object => f.object %>
+<%= f.input 'author', :label => '昵称' %>
+<%= f.input 'body', :label => '内容' %>
+<div class="control-group text required">
+  <label for="comment_body" class="text required control-label"><abbr title="required">*</abbr> 验证码</label>
+  <div class='controls'>
+    <%= show_simple_captcha %>
+  </div>
+</div>
+
+<div class='form-actions'>
+  <%= f.submit "添加评论", :class=>'btn btn-primary', :label => '' %>
+</div>
+<% end -%>
+
