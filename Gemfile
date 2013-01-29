@@ -20,7 +20,7 @@ gem 'jquery_datepicker'
 gem "galetahub-simple_captcha", :require => "simple_captcha"
 gem "friendly_id"
 
-gem 'acts-as-taggable-on', :git => 'git://github.com/mbleigh/acts-as-taggable-on.git'
+gem 'acts-as-taggable-on', :git => 'git://github.com/mbleigh/acts-as-taggable-on.git', :branch => "master"
 gem "rails_config"
 gem 'simple_form'
 gem 'kaminari'
