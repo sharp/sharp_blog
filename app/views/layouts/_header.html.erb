@@ -3,22 +3,21 @@
     <%= link_to raw(Settings.site_name), root_path, :class => 'brand' %>
   </h4>
   <ul class="nav">
-    <li><%= link_to "Posts", posts_path  %></li>
-    <li><%= link_to "Archives", archives_path  %></li>
-    <li><%= link_to "Comments", comments_path  %></li>
-    <%- if session[:login] %>
-    <li>
-      <%= link_to 'create post', new_post_path %>
-    </li>
-    <li>
-      <%= link_to 'logout', logout_path %>
-    </li>
-    <% else %>
-    <li><%= link_to 'login', new_session_path %></li>
-    <% end %>
+    <li><%= link_to "博文", posts_path  %></li>
+    <li><%= link_to "书签", bookmarks_path  %></li>
+    <li><%= link_to "评论", comments_path  %></li>
   </ul>
 	
   <div class='pull-right'>
-    <%= link_to "RSS订阅", '/posts.atom' %>
+    <% if current_user %>
+      <% if current_user.github_username == 'SharpV'%>
+        <%= link_to '创建文章', new_post_path, :class => 'btn' %>
+        <%= link_to '创建书签', new_bookmark_path, :class=> 'btn' %>
+      <% else %>
+        <%= link_to current_user.github_username, current_user.site_url %>
+      <% end %>
+    <% else %>
+      <%= link_to raw("Sign in with <b>GitHub</b>"), user_omniauth_authorize_path(:github), :class => 'btn-auth btn-github' %>
+    <% end %>
   </div>
 </div>

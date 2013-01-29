@@ -1,6 +1,11 @@
 <div id="footer" class="row">
-  <div class='left'><%= raw Settings.foot_left %></div>
-  <div class='right'><%= raw Settings.foot_right %></div>
+  <div class='left'>
+  	<%= raw Settings.foot_left %>
+  </div>
+  <div class='right'>
+  	<%= raw Settings.foot_right %> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <%= link_to "RSS订阅", '/posts.atom' %>
+  </div>
 </div>
 <% if !session[:login] and Rails.env.production? %>
 <script type="text/javascript">

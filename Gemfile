@@ -7,8 +7,9 @@ gem  'bluecloth'
 gem 'hz2py'
 gem 'sqlite3'
 gem 'redcarpet'
-
+gem 'devise', '~> 2.2.1'
 gem 'dynamic_sitemaps'
+gem 'cancan'
 # Use unicorn as the web server
 # gem 'unicorn'
 gem 'rails_autolink'
@@ -19,12 +20,14 @@ gem "auto_html"
 gem 'jquery_datepicker'
 gem "galetahub-simple_captcha", :require => "simple_captcha"
 gem "friendly_id"
-
+gem "omniauth", ">= 1.1.1"
+gem 'omniauth-github'
 gem 'acts-as-taggable-on', :git => 'git://github.com/mbleigh/acts-as-taggable-on.git', :branch => "master"
 gem "rails_config"
 gem 'simple_form'
 gem 'kaminari'
-gem 'rails_kindeditor', '~> 0.3.5'
+gem 'linkser'
+gem 'rails_kindeditor', :git => 'git@github.com:Macrow/rails_kindeditor.git'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
@@ -34,9 +37,9 @@ gem 'font-awesome-rails', :git => "git://github.com/bokmann/font-awesome-rails.g
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
-
+  gem 'less-rails'
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platform => :ruby
+  gem 'therubyracer', :platform => :ruby
 
   gem 'uglifier', '>= 1.0.3'
 end

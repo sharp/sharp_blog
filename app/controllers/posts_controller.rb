@@ -1,7 +1,5 @@
 class PostsController < ApplicationController
-  
-  before_filter :login_required, :except => [:index, :show]
-  def index
+    def index
     if params[:tag]
       @posts = Post.tagged_with(params[:tag]).order("published_at desc").page(params[:page])
     else
