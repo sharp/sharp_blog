@@ -19,4 +19,8 @@ class User < ActiveRecord::Base
       user.save!
     end
   end
+
+  def admin?
+  	self.github_username == 'SharpV'
+  end
 end

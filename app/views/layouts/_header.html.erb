@@ -1,11 +1,12 @@
 <div class='container'>
   <h4>
-    <%= link_to raw(Settings.site_name), root_path, :class => 'brand' %>
+    <%= link_to 'Sharp说', root_path, :class => 'brand' %>
   </h4>
   <ul class="nav">
     <li><%= link_to "博文", posts_path  %></li>
     <li><%= link_to "书签", bookmarks_path  %></li>
     <li><%= link_to "评论", comments_path  %></li>
+    <li><%= link_to "RSS", '/posts.atom' %></li>
   </ul>
 	
   <div class='pull-right'>

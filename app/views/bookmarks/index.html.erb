@@ -1,0 +1,8 @@
+<% if @bookmarks.empty? -%>
+	<p>There are no posts yet.</p>
+<% else -%>
+<div class="post-list">
+	<%= render @bookmarks %>
+</div>
+	<%= paginate @bookmarks %>
+<% end -%>

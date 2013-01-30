@@ -1,7 +1,7 @@
 <div class="meta">
   <ul>
-	  <%- if session[:login] %>
-			<li class="comments"><%= link_to "Edit", edit_post_path(post) %></li>
+	  <%- if current_user and current_user.admin? %>
+			<li class="comments"><%= link_to "编辑", edit_post_path(post) %></li>
 		<% end -%>
     <li class="comments"> 浏览(<%= post.views_count %>)</li>
     <li class="comments"> 评论(<%= post.approved_comments.size || 0 %>)</li>

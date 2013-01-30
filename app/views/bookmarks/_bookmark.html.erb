@@ -1,0 +1,16 @@
+<div id='bookmark-<%= bookmark.id %>' class="post row">
+  <h3><%= link_to(bookmark.title, bookmark.url) %></h3>
+  <p><%= bookmark.url %></p>
+  <p><%= bookmark.body %></p>
+  <div class="meta">
+  	<ul>
+	  	<%- if current_user and current_user.admin? %>
+			<li class="comments"><%= link_to "删除", bookmark, :remote => true, :method => 'delete', :confirm=>'Are you sure?' %></li>
+		<% end -%>
+		<% unless bookmark.tags.empty? -%>
+      		<li class="tags"><%= linked_tag_list(bookmark.tags) %></li>
+   		<% end -%>
+    	<li class="date">发表于 <%= format_post_date(bookmark.published_at) %></li>
+ 	</ul>
+  </div>
+</div>

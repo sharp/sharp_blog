@@ -1,7 +1,7 @@
 #source 'http://ruby.taobao.org/'  
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.3'
+gem 'rails', '3.2.11'
 gem 'rake', '0.9.2.2'
 gem  'bluecloth'
 gem 'hz2py'

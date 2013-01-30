@@ -35,6 +35,14 @@ class CommentsController < ApplicationController
     end
   end
 
+  def destroy
+    @comment_id = params[:id]
+    Bookmark.delete @comment_id
+    respond_to do |format|
+      format.js
+    end
+  end
+
   protected
 
   def find_post
@@ -44,4 +52,6 @@ class CommentsController < ApplicationController
       @post = nil
     end
   end
+
+
 end

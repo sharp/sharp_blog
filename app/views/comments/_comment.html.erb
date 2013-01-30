@@ -1,8 +1,11 @@
-<div class='post'>
+<div id='comment-<%= comment.id %>' class='post'>
   <cite><%= comment.author %></cite> says:
   <br>
   <small class="commentmetadata date">
     <%= format_comment_date(comment.created_at) %>
   </small>
   <p><%=raw comment.body_html %></p>
+  <%- if current_user and current_user.admin? %>
+	<p><%= link_to "删除", comment, :remote => true, :method => 'delete', :confirm=>'Are you sure?' %></p>	
+  <% end -%>
 </div>

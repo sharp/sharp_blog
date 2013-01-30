@@ -1,4 +1,4 @@
-<%= form_tag load_link_path, :remote => true, :id => 'create_link_form', :data => {:type=>"script", :"method"=>"post"} do %>
+<%= form_tag load_link_path, :remote => true, :id => 'create_link_form' do %>
 <fieldset> 
     <%= url_field_tag(:url) %>
     <div class="validation-error"></div>

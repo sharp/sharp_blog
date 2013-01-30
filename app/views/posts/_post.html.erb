@@ -1,4 +1,4 @@
-<div class="post row post-<%= post.id %>">
+<div class="post row" id="post-<%= post.id %>">
   <h3><%= link_to(post.title, post_path(post)) %></h3>
   <%= render "meta", :post => post %>
 </div>
