@@ -1,12 +1,15 @@
-class Tagging < ActiveRecord::Base #:nodoc:
-  belongs_to :tag, :counter_cache => true
-  belongs_to :taggable, :class_name => 'Post', :foreign_key => 'taggable_id' #:polymorphic => true
+class Tagging < ActiveRecord::Base 
+
+	attr_protected
+
+ 	belongs_to :tag, :counter_cache => true
+ 	belongs_to :taggable, :class_name => 'Post', :foreign_key => 'taggable_id' #:polymorphic => true
   
-  after_destroy :remove_unused_tags
+ 	after_destroy :remove_unused_tags
   
-  private
+ 	private
   
-  def remove_unused_tags
-    Tag.destroy_all :taggings_count => 0 if Tag.destroy_unused
-  end
+	def remove_unused_tags
+		Tag.destroy_all :taggings_count => 0 if Tag.destroy_unused
+	end
 end

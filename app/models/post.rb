@@ -10,7 +10,7 @@ class Post < ActiveRecord::Base
   before_validation       :generate_slug, :apply_filter
   validates_presence_of   :title, :slug, :body
 
-  attr_accessible :title, :body, :tag_list, :slug, :published_at
+  attr_accessible :title, :body, :tag_list, :slug, :published_at, :body_html, :views_count, :edited_at, :approved_comments_count
   
   auto_html_for :body do
     html_escape
