@@ -164,6 +164,7 @@ GEM
       oauth2 (~> 0.8.0)
       omniauth (~> 1.0)
     orm_adapter (0.4.0)
+    pg (0.14.1)
     polyglot (0.3.3)
     rack (1.4.4)
     rack-cache (1.2)
@@ -256,6 +257,7 @@ DEPENDENCIES
   mini_magick
   omniauth (>= 1.1.1)
   omniauth-github
+  pg
   rails (= 3.2.11)
   rails_autolink
   rails_config
