@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130129031215) do
+ActiveRecord::Schema.define(:version => 20130325033641) do
 
   create_table "bookmarks", :force => true do |t|
     t.string   "title"
@@ -38,6 +38,15 @@ ActiveRecord::Schema.define(:version => 20130129031215) do
 
   add_index "comments", ["created_at"], :name => "index_comments_on_created_at"
   add_index "comments", ["post_id"], :name => "index_comments_on_post_id"
+
+  create_table "kindeditor_assets", :force => true do |t|
+    t.string   "asset"
+    t.string   "file_name"
+    t.integer  "file_size"
+    t.string   "file_type"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "open_id_authentication_associations", :force => true do |t|
     t.integer "issued"
