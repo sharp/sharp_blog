@@ -9,7 +9,10 @@ require "rubygems"
 require "sequel"
 
 task :load_old_blog => :environment do
-    Sequel.connect("sqlite://#{Rails.root.to_s}/db/sharp_blog.sqlite3") do |db| 
+    Post.delete_all
+    Tag.delete_all
+    Tagging.delete_all
+    Sequel.connect("sqlite://#{Rails.root.to_s}/db/blog.sqlite3") do |db| 
     	db[:posts].all do |post|
     		Post.create :title => post[:title], :body => post[:body], :body_html => post[:body_html],
     			:published_at => post[:published_at], :views_count => post[:views_count], :slug => post[:slug],
