@@ -11,7 +11,7 @@ blockquote {
   background-color: Silver; 
 }
 
-.wmd-input 
+.simple_form .wmd-input, .wmd-input  
 { 
   height: 300px;
   width: 640px;
@@ -46,8 +46,3 @@ blockquote {
   display: inline-block; 
   list-style: none;
 }
-
-
-
-
-

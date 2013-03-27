@@ -9,9 +9,11 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require bootstrap_and_overrides
  *= require jquery.ui.datepicker
+ *= require auth-buttons
  *= require markdown
  *= require style
+ *= require coderay
  *= require wmd
- *= require_tree .
 */
