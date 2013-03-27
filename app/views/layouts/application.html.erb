@@ -37,27 +37,11 @@
   <div class="container">
     <div class="content">
       <%= notice_message %>
-	    <div class="span-left">
-	     <%= yield %>
-	    </div>
-	    <div class="span-right">
-	      <div class="well sidebar-nav">
-	        <h3>Tags</h3>
-	          <ul class="nav nav-list">
-	          <%- Post.tag_counts_on(:tags).each do |tag| %>
-	            <li class='tags'>
-		            <span class='tag'><%= link_to tag.name, tag_posts_path(tag.name), :class => 'tag' %></span>x <%= tag.count %>
-	            </li>
-	          <% end -%>
-	          </ul>
-	        </div><!--/.well -->
-	      </div><!--/span-->
-      </div><!--/row-->
-    </div><!--/content-->
-    
-    <footer class='container'>
-      <%= render 'layouts/footer' %>
-    </footer>
+	    <%= yield %>
+    </div><!--/content-->  
   </div> <!-- /container -->
+  <footer class='container'>
+      <%= render 'layouts/footer' %>
+  </footer>
 </body>
 </html>

@@ -10,5 +10,8 @@
  *
  *= require_self
  *= require jquery.ui.datepicker
+ *= require markdown
+ *= require style
+ *= require wmd
  *= require_tree .
 */

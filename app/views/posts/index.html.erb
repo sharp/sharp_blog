@@ -1,8 +1,9 @@
-<% if @posts.empty? -%>
-	<p>There are no posts yet.</p>
-<% else -%>
-<div class="post-list">
-	<%= render @posts %>
+<div class="span-left">
+  <div class="post-list">
+   <%= render @posts %>
+  </div>
 </div>
-	<%= paginate @posts %>
-<% end -%>
+
+<div class="span-right">
+  <%= render 'tags' %>
+</div>

@@ -14,5 +14,7 @@
 //= require jquery-ui
 //= require jquery_ujs
 //= require twitter/bootstrap
-//= require kindeditor
+//= require markdown.converter
+//= require markdown.sanitizer
+//= require markdown.editor
 //= require_tree .

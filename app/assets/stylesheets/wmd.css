@@ -1,0 +1,53 @@
+blockquote {
+  border-left: 2px dotted #888;
+  padding-left: 5px;
+  background: #d0f0ff;
+}
+
+
+.wmd-button-bar 
+{
+  width: 100%;
+  background-color: Silver; 
+}
+
+.wmd-input 
+{ 
+  height: 300px;
+  width: 640px;
+}
+
+.wmd-preview 
+{ 
+  border: 1px solid #eee;
+  padding:5px;
+  margin-bottom: 10px;
+}
+
+.wmd-button-row 
+{
+  position: relative; 
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  margin-top: 10px;
+  padding: 0px;  
+  height: 20px;
+}
+
+.wmd-spacer
+{
+  width: 1px; 
+  height: 20px; 
+  margin-left: 14px;
+  
+  position: absolute;
+  background-color: Silver;
+  display: inline-block; 
+  list-style: none;
+}
+
+
+
+
+

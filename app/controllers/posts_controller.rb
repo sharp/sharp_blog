@@ -18,7 +18,7 @@ class PostsController < ApplicationController
   def show
   @post = Post.find params[:id]
     views_count = @post.views_count + 1
-    @post.views_count = views_count unless session[:login]
+    @post.views_count = views_count unless current_user
     @post.save
     @comment = Comment.new
   end

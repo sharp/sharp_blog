@@ -1,50 +1,41 @@
-
 <% content_for(:title) do -%>
   <%= "Sharp说 - #{@post.title}" %>
 <% end -%>
+<div class='span-left'>
+  <h3><%= @post.title -%></h3>
+  <%= render "posts/meta", :post => @post %>
 
-<h2><%= @post.title -%></h2>
-<%= render "posts/meta", :post => @post %>
-
-<div class="entrybody markedit-preview toggle-preview">
-  <%= auto_link raw(@post.body_html) %>
-  <br />
-	本文来源于<%= link_to "Sharp说", "http://sharp.bz" %> 转载请注明地址
-</div>
-<br />
-<div class='row'>
-	<!-- Baidu Button BEGIN -->
-    <div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
-        <a class="bds_qzone"></a>
-        <a class="bds_tsina"></a>
-        <a class="bds_tqq"></a>
-        <a class="bds_renren"></a>
-        <span class="bds_more">更多</span>
-	<a class="shareCount"></a>
+  <div class="content markedit-preview toggle-preview">
+    <%= raw markdown(@post.body) %>
+    <br /><br />
+	  <div class='span'>本文来源于<%= link_to "Sharp说", "http://sharp.bz" %> 转载请注明地址 </div>
+    <div class='span pull-right clearfix'>
+	    <%= render 'layouts/share' %>
     </div>
-	<script type="text/javascript" id="bdshare_js" data="type=tools" ></script>
-	<script type="text/javascript" id="bdshell_js"></script>
-	<script type="text/javascript">
-	document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + new Date().getHours();
-	</script>
-</div>
-<br />
-<%= render @post.comments, :partial => "comments/comment" %>
-<br />
-<h3>发表评论</h3>
-<%= simple_form_for [@post, @comment], :html => {:class=>'form-horizontal'}  do |f| %>
-<%= render 'posts/error_messages', :object => f.object %>
-<%= f.input 'author', :label => '昵称' %>
-<%= f.input 'body', :label => '内容' %>
-<div class="control-group text required">
-  <label for="comment_body" class="text required control-label"><abbr title="required">*</abbr> 验证码</label>
-  <div class='controls'>
-    <%= show_simple_captcha %>
   </div>
+  <br />
+  <%= render @post.comments, :partial => "comments/comment" %>
+  <br />
+  <h3>发表评论</h3>
+  <%= simple_form_for [@post, @comment], :html => {:class=>'form-horizontal'}  do |f| %>
+  <%= render 'posts/error_messages', :object => f.object %>
+  <%= f.input 'author', :label => '昵称' %>
+  <%= f.input 'body', :label => '内容' %>
+  <div class="control-group text required">
+    <label for="comment_body" class="text required control-label"><abbr title="required">*</abbr> 验证码</label>
+    <div class='controls'>
+      <%= show_simple_captcha %>
+    </div>
+  </div>
+  
+  <div class='form-actions'>
+    <%= f.submit "添加评论", :class=>'btn btn-primary', :label => '' %>
+  </div>
+  <% end -%>
 </div>
 
-<div class='form-actions'>
-  <%= f.submit "添加评论", :class=>'btn btn-primary', :label => '' %>
+<div class="span-right">
+  <%= render 'tags' %>
 </div>
-<% end -%>
+
 

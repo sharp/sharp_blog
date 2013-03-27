@@ -13,13 +13,13 @@ Quick Start
 
   cd sharp_blog
 
+  cp config/settings.yml.sample config/settings.yml
+
   bundle install         
 
   rake db:schema:load
 	
-	cp config/settings.yml.sample config/settings.yml
-	
-	rails s    # Start the server
+  rails s    
 
 ```
 

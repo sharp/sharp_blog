@@ -1,5 +1,5 @@
-#source 'http://ruby.taobao.org/'  
-source 'https://rubygems.org'
+source 'http://ruby.taobao.org/'  
+#source 'https://rubygems.org'
 
 gem 'rails', '3.2.12'
 gem 'rake', '0.9.2.2'
@@ -11,8 +11,7 @@ gem 'pg'
 gem 'devise', '~> 2.2.1'
 gem 'dynamic_sitemaps'
 gem 'cancan'
-# Use unicorn as the web server
-# gem 'unicorn'
+gem 'coderay'
 gem 'thin'
 gem 'sequel'
 gem 'rails_autolink'
@@ -32,13 +31,12 @@ gem "rails_config"
 gem 'simple_form'
 gem 'kaminari'
 gem 'linkser'
-gem 'rails_kindeditor', '~> 0.3.13'
+gem 'pagedown-rails', '~> 1.1.2'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 gem 'font-awesome-rails', :git => "git://github.com/bokmann/font-awesome-rails.git"
 gem 'sass-rails',   '~> 3.2.3'
-  
 gem 'coffee-rails', '~> 3.2.1'
 gem 'less-rails'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes

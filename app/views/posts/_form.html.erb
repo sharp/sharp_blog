@@ -1,8 +1,31 @@
+<div class='span-left'>
 <%= simple_form_for @post do |f| %>
 	<%= render 'error_messages', :object => f.object %>
   <%= f.input :title %>
-  <%= f.input :body, :as => :kindeditor, :label => false, :input_html => {simple_mode: true, :width => 630, :height => 420 } %>
+  
+  <div class='wmd-panel'>
+    <div id='wmd-button-bar'></div>
+    <%= f.input :body, :label => false, :input_html => {class: 'wmd-input', id: 'wmd-input'} %>
+  </div>
+  <%= render 'preview' %>
+
   <%= f.input :published_at, :as => :ui_date_picker %>
   <%= f.input :tag_list %>
   <%= f.button :submit, :class=>'btn btn-primary' %>
 <% end %>
+</div>
+
+<script>
+  (function () {
+    var converter = Markdown.getSanitizingConverter();
+    converter.hooks.chain("preConversion", function (text) {
+      return text.replace(/\b(a\w*)/gi, "*$1*");
+    });
+
+    converter.hooks.chain("plainLinkText", function (url) {
+      return "This is a link to " + url.replace(/^https?:\/\//, "");
+    });
+    var editor = new Markdown.Editor(converter);
+    editor.run();
+  })();
+</script>
