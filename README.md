@@ -9,7 +9,7 @@ Quick Start
 =========
 
 ```
-  git clone git://github.com/liuqiang/sharp_blog.git
+  git clone git@github.com:SharpV/sharp_blog.git
 
   cd sharp_blog
 
@@ -26,7 +26,7 @@ Quick Start
 
 About Admin
 =========
-You need connet to github, you can create application on github.com, 
+You need login by social connection to github, you can create oAuth application on github.com, 
 then you can modify user model by adding your github username.
 
 ```
