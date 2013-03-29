@@ -1,9 +1,16 @@
 blockquote {
   border-left: 2px dotted #888;
   padding-left: 5px;
-  background: #d0f0ff;
+  background: #eef;
+  padding: 5px;
 }
 
+blockquote p {
+    font-size: 13.5px;
+    font-weight: 300;
+    line-height: 1.25;
+    margin-bottom: 0;
+}
 
 .wmd-button-bar 
 {
@@ -19,7 +26,7 @@ blockquote {
 
 .wmd-preview 
 { 
-  border: 1px solid #eee;
+  border: 1px solid #eed;
   padding:5px;
   margin-bottom: 10px;
 }

@@ -12,12 +12,6 @@ class Post < ActiveRecord::Base
 
   attr_accessible :title, :body, :tag_list, :slug, :published_at, :body_html, :views_count, :edited_at, :approved_comments_count
   
-  auto_html_for :body do
-    html_escape
-    image
-    link :target => "_blank", :rel => "nofollow"
-    simple_format
-  end
   
   def validate_published_at_natural
     errors.add("published_at_natural", "Unable to parse time") unless published?
