@@ -14,6 +14,6 @@
  *= require auth-buttons
  *= require markdown
  *= require style
- *= require coderay
+ *= require highlight/styles/github
  *= require wmd
 */

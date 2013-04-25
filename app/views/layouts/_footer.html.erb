@@ -1,14 +1,14 @@
 <div id="footer" class="row">
   <div class='left'>
-  	<p>@2012-2013 Powered by www.sharp.bz(AT)gmail.com</p>
+  	<p><%= raw Settings.footer_left %></p>
   </div>
   <div class='right'>
-  	浙ICP备12009412号 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <p><%= raw Settings.footer_right %></p>
   </div>
 </div>
-<% if !session[:login] and Rails.env.production? %>
-<script type="text/javascript">
-var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+<% if !current_user and Rails.env.production? %>
+  <script type="text/javascript">
+    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
 document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fef6b2c618bf00185b35a450a21e8fb87' type='text/javascript'%3E%3C/script%3E"));
-</script>
+  </script>
 <% end %>

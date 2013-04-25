@@ -17,4 +17,11 @@
 //= require markdown.converter
 //= require markdown.sanitizer
 //= require markdown.editor
-//= require_tree .
+//= require datetime
+//= require highlight/highlight.pack
+//= require_self
+$(document).ready(function(){
+  $('div.code').each(function(i, e) {hljs.highlightBlock(e, null, false)});
+  $('pre').each(function(i, e) {hljs.highlightBlock(e, null, false)});
+});
+

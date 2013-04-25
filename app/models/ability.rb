@@ -5,7 +5,7 @@ class Ability
     can :read, :all
     can :create, User
     can [:login, :github], :all
-    if user.github_username == 'SharpV'
+    if user.github_username == Settings.github_username
         can :manage, :all
     end
   end

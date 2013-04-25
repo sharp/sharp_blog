@@ -21,6 +21,6 @@ class User < ActiveRecord::Base
   end
 
   def admin?
-  	self.github_username == 'SharpV'
+  	self.github_username == Settings.github_username
   end
 end

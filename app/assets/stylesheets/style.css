@@ -33,11 +33,6 @@ code, pre {
     font-size: 9pt;
 }
 
-.archive-month .tags
-{
-    color: #bbbbbb;
-}
-
 div.meta{
     margin-top: 5px;
     margin-bottom: 15px; 
@@ -221,5 +216,13 @@ span.error
 .simple_form textarea{
     width: 400px;
     height: 180px;
+}
+
+
+#about-page {
+    background-color: #EBEDE3;
+    background-image: none;
+    width: 768px;
+    padding: 20px;
 }
 

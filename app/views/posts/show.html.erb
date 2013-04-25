@@ -1,6 +1,7 @@
 <% content_for(:title) do -%>
-  <%= "Sharp说 - #{@post.title}" %>
+  <%= "#{Settings.site_name} - #{@post.title}" %>
 <% end -%>
+
 <div class='span-left'>
   <h3><%= @post.title -%></h3>
   <%= render "posts/meta", :post => @post %>
@@ -13,25 +14,6 @@
 	    <%= render 'layouts/share' %>
     </div>
   </div>
-  <br />
-  <%= render @post.comments, :partial => "comments/comment" %>
-  <br />
-  <h3>发表评论</h3>
-  <%= simple_form_for [@post, @comment], :html => {:class=>'form-horizontal'}  do |f| %>
-  <%= render 'posts/error_messages', :object => f.object %>
-  <%= f.input 'author', :label => '昵称' %>
-  <%= f.input 'body', :label => '内容' %>
-  <div class="control-group text required">
-    <label for="comment_body" class="text required control-label"><abbr title="required">*</abbr> 验证码</label>
-    <div class='controls'>
-      <%= show_simple_captcha %>
-    </div>
-  </div>
-  
-  <div class='form-actions'>
-    <%= f.submit "添加评论", :class=>'btn btn-primary', :label => '' %>
-  </div>
-  <% end -%>
 </div>
 
 <div class="span-right">

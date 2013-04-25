@@ -1,9 +1,9 @@
 <%= form_tag load_link_path, :remote => true, :id => 'create_link_form' do %>
-<fieldset> 
+  <fieldset> 
     <%= url_field_tag(:url) %>
     <div class="validation-error"></div>
-    <%= submit_tag '加载链接' %>
-</fieldset>
+    <%= submit_tag 'load url', disable_with: 'loading...', class: 'btn btn-info' %>
+  </fieldset>
 <% end %>
 
 <%= simple_form_for @bookmark, :html => {:id => 'bookmark_form'} do |f| %>
@@ -13,5 +13,5 @@
 
   <%= f.input :published_at %>
   <%= f.input :tag_list %>
-  <%= f.button :submit, :class=>'btn btn-primary' %>
+  <%= f.button :submit, :class=>'btn btn-primary', disable_with: 'submiting...' %>
 <% end %>

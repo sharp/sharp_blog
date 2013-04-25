@@ -3,7 +3,7 @@ class PostsController < ApplicationController
     if params[:tag]
        @posts = Post.tagged_with(params[:tag]).order("published_at desc").page(params[:page])
     else     
-       @posts = Post.order("published_at desc").page(params[:page])
+       @posts = Post.includes(:tags).order("published_at desc").page(params[:page])
     end
     respond_to do |format|        
       format.html

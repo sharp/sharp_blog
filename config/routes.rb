@@ -9,12 +9,12 @@ SharpBlog::Application.routes.draw do
   match 'load_link', :to => 'bookmarks#load_link', :as => :load_link
 
   match 'tags/:tag', :to => 'posts#index', :as => :tag_posts
-  resources :archives, :only => [:index]
   resources :bookmarks
 
   resources :comments
   resources :posts do 
     resources :comments
   end
+  match 'about/:version', :to => 'about#index'
   root :to => 'posts#index'
 end

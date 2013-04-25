@@ -1,7 +1,7 @@
 source 'http://ruby.taobao.org/'  
 #source 'https://rubygems.org'
 
-gem 'rails', '3.2.12'
+gem 'rails', '3.2.13'
 gem 'rake', '0.9.2.2'
 gem  'bluecloth'
 gem 'hz2py'
@@ -41,7 +41,7 @@ gem 'coffee-rails', '~> 3.2.1'
 gem 'less-rails'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 gem 'therubyracer', :platform => :ruby
-
+gem 'wicked_pdf'
 gem 'uglifier', '>= 1.0.3'
 
 gem 'jquery-rails'

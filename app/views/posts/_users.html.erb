@@ -1,0 +1,12 @@
+<div class="well sidebar-nav">
+<h3>Users</h3>
+  <ul class="nav nav-list">
+    <%- User.all.each do |user| %>
+      <li class='tags'>
+        <span class='tag'>
+          <%= link_to user.github_username, "http://github.com/#{user.github_username}", :class => 'tag' %>
+        </span>
+      </li>
+    <% end -%>
+  </ul>
+</div><!--/span--> 

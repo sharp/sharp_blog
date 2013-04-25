@@ -1,19 +1,19 @@
 <div class='container'>
-  <%= link_to 'Sharp说', root_path, :class => 'brand' %>
+  <%= link_to Settings.site_name, root_path, :class => 'brand' %>
   <ul class="nav">
-    <li><%= link_to "博文", posts_path  %></li>
-    <li><%= link_to "书签", bookmarks_path  %></li>
-    <li><%= link_to "评论", comments_path  %></li>
+    <li><%= link_to "Post", posts_path  %></li>
+    <li><%= link_to "Bookmark", bookmarks_path  %></li>
+    <li><%= link_to "Comment", comments_path  %></li>
     <li><%= link_to "RSS", '/posts.atom' %></li>
   </ul>
 	
   <div class='pull-right'>
     <% if current_user %>
-      <% if current_user.github_username == 'SharpV'%>
-        <%= link_to '创建文章', new_post_path, :class => 'btn' %>
-        <%= link_to '创建书签', new_bookmark_path, :class=> 'btn' %>
+      <% if current_user.admin? %>
+        <%= link_to 'New Post', new_post_path, :class => 'btn btn-success span' %>
+        <%= link_to 'New Bookmark', new_bookmark_path, :class=> 'btn btn-info span' %>
       <% else %>
-        <%= link_to current_user.github_username, current_user.site_url %>
+        <%= link_to current_user.github_username, current_user.site_url, class: 'btn btn-info' %>
       <% end %>
     <% else %>
       <%= link_to raw("Sign in with <b>GitHub</b>"), user_omniauth_authorize_path(:github), :class => 'btn-auth btn-github' %>
