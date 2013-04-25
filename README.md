@@ -1,17 +1,17 @@
 
-sharp_blog
-=========
+### sharp_blog
+
 
 A Ruby on Rails blogging app for the fashionable developer
 
 
-Quick Start
-=========
+### Quick Start
 
-```ruby
+
+```
 
   brew install wkhtmltopdf
-  
+
   git clone git@github.com:SharpV/sharp_blog.git
 
   cd sharp_blog
@@ -30,20 +30,18 @@ Quick Start
 You can access in local at http://yourdomain.dev
 
 
-About Admin
-=========
-You need login by social connection to github, you can create oAuth application on github.com, 
-then you can modify user model by adding your github username.
+### About Admin
 
-```ruby
-  def admin?
-    self.github_username == 'SharpV'
-  end
+You can login only by social connection with github, and you could create oAuth application on github.com, 
+
+then add your github username to config/settings.yml.
+
+```
+  github_username: 'your username'
 ```
 
 
-License
-=========
+### License
 
 GPL(General Public License) - See LICENSE
 

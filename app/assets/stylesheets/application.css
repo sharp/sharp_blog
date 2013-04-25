@@ -14,6 +14,6 @@
  *= require auth-buttons
  *= require markdown
  *= require style
- *= require highlight/styles/github
+ *= require highlight_js/styles/github
  *= require wmd
 */

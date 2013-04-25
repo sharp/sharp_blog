@@ -1,3 +1,0 @@
-[submodule "lib/assets/highlight"]
-	path = lib/assets/highlight
-	url = git@github.com:isagalaev/highlight.js.git

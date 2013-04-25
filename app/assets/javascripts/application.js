@@ -18,8 +18,9 @@
 //= require markdown.sanitizer
 //= require markdown.editor
 //= require datetime
-//= require highlight/highlight.pack
+//= require highlight_js/highlight.pack
 //= require_self
+
 $(document).ready(function(){
   $('div.code').each(function(i, e) {hljs.highlightBlock(e, null, false)});
   $('pre').each(function(i, e) {hljs.highlightBlock(e, null, false)});
