@@ -1,8 +1,423 @@
-<h4>基本信息</h4>
-<table class='table border'>
-  <tbody>
-    <tr>
-      <td>Sharp</td>
-    </tr>
-  <tbody>
-</table>
+<h4 class='border'>基本信息</h4>
+<div class='pull-left span'>
+  <p>
+    <%- ['爱编程, 爱代码', '爱github, 爱开源', '爱奋斗， 也爱生活', '不是谁的粉丝, 我就是我', '没有什么特别, 但有一颗自信的心', '我是充满激情的海盗， 寻找属于我的贼船'].each_with_index do |row, index| %>
+      <%= raw "&nbsp;&nbsp;&nbsp" * index %>
+      <%= row %>
+      <%= raw "<br /><br />" %>
+    <% end %>
+
+  </p>
+</div>
+<div class='pull-right span'>
+  <table class='table border'>  
+    <tbody>
+      <tr>
+        <td>姓名</td>
+        <td>刘强(1985-07)</td>
+      </tr>
+      <tr>
+        <td>工作时间</td>
+        <td>2007－至今</td>
+      </tr>
+      <tr>
+        <td>Blog</td>
+        <td><%= link_to 'http://sharp.bz', 'http://sharp.bz' %></td>
+      </tr>
+      <tr>
+        <td>Email</td>
+        <td>liu19850701@gmail.com</td>
+      </tr>
+      <tr>
+        <td>Github</td>
+        <td>
+          <%= link_to 'https://github.com/SharpV', 'https://github.com/SharpV', target: '_blank' %>
+        </td>
+      </tr>
+      <tr>
+        <td>毕业院校</td>
+        <td>华北电力大学(软件工程)</td>
+      </tr>
+    <tbody>
+  </table>
+</div>
+
+<h4 class='border'>专业技能</h4>
+<div class='span pull-left'>
+  <table class='table border'>
+    <tbody>
+      <tr>
+        <td>编程语言</td>
+        <td>Ruby Erlang Objc Javascript</td>
+      </tr>
+      <tr>
+        <td>
+          前端
+        </td>
+        <td>
+          Html5 Css jQuery Bootstrap CoffeeScript
+        </td>
+      </tr>
+      <tr>
+        <td>
+          数据库
+        </td>
+        <td>
+          Postgresql Mysql Riak Redis
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class='span pull-right'>
+  <table class='table border'>
+    <tbody>
+      <tr>
+        <td width='30'>框架</td>
+        <td>Rails OTP CocoaTouch FFMpeg</td>
+      </tr>
+      <tr>
+        <td>
+          网络
+        </td>
+        <td>
+          TCP/IP XMPP Http/Https RTMP HDS/HLS
+        </td>
+      </tr>
+      <tr>
+        <td>
+          工具
+        </td>
+        <td>
+          Gitlab Redmine Sublime Emacs MacOX Chef
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<h4 class='border'>项目经验</h4>
+<div class='span pull-left'>
+  <table class='table border'>
+    <tbody>
+      <tr class="success">
+        <td width='60'>项目名称</td>
+        <td>云猫TV</td>
+      </tr>
+      <tr>
+        <td>
+          所在公司
+        </td>
+        <td>
+          杭州东方网和
+        </td>
+      </tr>
+      <tr>
+        <td>时间</td>
+        <td>2012/09 - 至今</td>
+      </tr>
+      <tr>
+        <td>
+          所用技术
+        </td>
+        <td>
+          Erlang Postgresql Riak Rails iOS Nginx FFMpeg
+        </td>
+      </tr>
+      <tr>
+        <td>
+          项目简介
+        </td>
+        <td>
+          云猫TV是一款面向移动互联网的CableTV产品， 是用户可以用手机和Pad实时收看电视节目， 电视节目的信号源来自有线电视网络，EPG菜单来自宽带网或者蜂窝网络， 目前产品在华数运营。
+          我是整个产品的负责人，用Erlang/Riak实现底层的视频数据存储以及用Ruby实现后端的API服务和网管系统的研发
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class='span pull-right'>
+  <table class='table border'>
+    <tbody>
+      <tr class="success">
+        <td width='60'>项目名称</td>
+        <td>融合视讯系统</td>
+      </tr>
+      <tr>
+        <td>
+          所在公司
+        </td>
+        <td>
+          杭州东方网和
+        </td>
+      </tr>
+      <tr>
+        <td>时间</td>
+        <td>2012/03 - 2012/08</td>
+      </tr>
+      <tr>
+        <td>
+          所用技术
+        </td>
+        <td>
+          C Ruby
+        </td>
+      </tr>
+      <tr>
+        <td>
+          项目简介
+        </td>
+        <td>
+          融合视讯系统是一款基于三网融合的视频会议系统， 其主要特点是下行视频流走Cable网络，发挥Cable广播网的特点， 
+          从而减轻服务器的压力，提升了用户体验。我主要负责服务器数据转发模块的开发，用C通过UDP接收组播包， 编码成MPEG-TS数据包，再通过UDP转发到Cable网QAM设备, 用Ruby控制节点的注册和监控
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class='clearfix'></div>
+<div class='span pull-left'>
+  <table class='table border'>
+    <tbody>
+      <tr class="success">
+        <td width='60'>项目名称</td>
+        <td>宽带加速系统</td>
+      </tr>
+      <tr>
+        <td>
+          所在公司
+        </td>
+        <td>
+          杭州东方网和
+        </td>
+      </tr>
+      <tr>
+        <td>时间</td>
+        <td>2010/10 - 2012/02</td>
+      </tr>
+      <tr>
+        <td>
+          所用技术
+        </td>
+        <td>
+          C Ruby Erlang Redis
+        </td>
+      </tr>
+      <tr>
+        <td>
+          项目简介
+        </td>
+        <td>
+          宽带加速系统是一款面向三网融合领域的宽带加速系统， 可利用cable网传输下行IP数据，从而增加用户的网络带宽。
+          我主要负责服务器系统的架构和设计， 采用Erlang/OTP构建了会话接入管理，实现了和运营商BOSS系统的对接，采用Ruby实现了节点的管理和客户端的管理，
+          目前此系统已投入运营，并得到了国家广电总局科技进步二等奖
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class='span pull-right'>
+  <table class='table border'>
+    <tbody>
+      <tr class="success">
+        <td width='60'>项目名称</td>
+        <td>Asics欧洲</td>
+      </tr>
+      <tr>
+        <td>
+          所在公司
+        </td>
+        <td>
+          杭州ThePlant
+        </td>
+      </tr>
+      <tr>
+        <td>时间</td>
+        <td>2009/09 - 2010/09</td>
+      </tr>
+      <tr>
+        <td>
+          网络
+        </td>
+        <td>
+          Ruby Rails jQuery
+        </td>
+      </tr>
+      <tr>
+        <td>
+          项目简介
+        </td>
+        <td>
+          Asics电子商务是为Asics公司构建的面向欧洲地区用户的电子商务平台，平台管理了35个国家和地区的电子商店，电子商店可发布
+          本地区的内容和活动，用户可在平台上购买和查询相关的产品信息，
+          我主要负责活动模块、内容管理模块和支付模块，采用Ruby技术实现了web层的开发， 采用Redis技术改进产品的搜索性能，采用Ajax技术
+          提升用户体验
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class='clearfix'></div>
+
+<div class='span pull-left'>
+  <table class='table border'>
+    <tbody>
+      <tr class="success">
+        <td width='60'>项目名称</td>
+        <td>学习乐学习社区</td>
+      </tr>
+      <tr>
+        <td>
+          所在公司
+        </td>
+        <td>
+          江苏北极光
+        </td>
+      </tr>
+      <tr>
+        <td>时间</td>
+        <td>2009/06 - 2009/09</td>
+      </tr>
+      <tr>
+        <td>
+          所用技术
+        </td>
+        <td>
+          Rails Mysql 
+        </td>
+      </tr>
+      <tr>
+        <td>
+          项目简介
+        </td>
+        <td>
+          学习乐学习社区是一款面向中小学的SNS社区， 学生可以在平台上分享学习资料以及评选举办活动，同时可以赢取积分，积分可兑换一些礼品，
+          我主要负责整个项目的架构， 以及实现积分兑换模块的开发
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class='span pull-right'>
+  <table class='table border'>
+    <tbody>
+      <tr class="success">
+        <td width='60'>项目名称</td>
+        <td>家校互动平台</td>
+      </tr>
+      <tr>
+        <td>
+          所在公司
+        </td>
+        <td>
+          江苏北极光
+        </td>
+      </tr>
+      <tr>
+        <td>时间</td>
+        <td>2008/09 - 2009/06</td>
+      </tr>
+      <tr>
+        <td>
+          所用技术
+        </td>
+        <td>
+          Ruby Rails CMPP Oracle Flex
+        </td>
+      </tr>
+      <tr>
+        <td>
+          项目简介
+        </td>
+        <td>
+          家校互动平台是面向老师和家长的互动平台， 老师可以在后台编辑学生的成绩和作业等教学信息，
+          可利用Flex客户端发送短信至家长的手机上，我在项目中负责后台管理系统的开发以及短信网关的研发
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class='clearfix'></div>
+
+<div class='span pull-left'>
+  <table class='table border'>
+    <tbody>
+      <tr class="success">
+        <td width='60'>项目名称</td>
+        <td>南通教育博客</td>
+      </tr>
+      <tr>
+        <td>
+          所在公司
+        </td>
+        <td>
+          江苏北极光科技
+        </td>
+      </tr>
+      <tr>
+        <td>时间</td>
+        <td>2007/12 - 2008/08</td>
+      </tr>
+      <tr>
+        <td>
+          所用技术
+        </td>
+        <td>
+          Rails Mysql
+        </td>
+      </tr>
+      <tr>
+        <td>
+          项目简介
+        </td>
+        <td>
+          南通教育博客是面向南通地区的老师构件的教学分享平台， 本人负责全部的前后端设计开发
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class='span pull-right'>
+  <table class='table border'>
+    <tbody>
+      <tr class="success">
+        <td width='60'>项目名称</td>
+        <td>WebERP</td>
+      </tr>
+      <tr>
+        <td>
+          所在公司
+        </td>
+        <td>
+          香港美维集团
+        </td>
+      </tr>
+      <tr>
+        <td>时间</td>
+        <td>2007/07 - 2007/12</td>
+      </tr>
+      <tr>
+        <td>
+          所用技术
+        </td>
+        <td>
+          Java Oracle
+        </td>
+      </tr>
+      <tr>
+        <td>
+          工具
+        </td>
+        <td>
+          WebERP是美维集团内部使用的ERP系统，涉及100多个模块，我主要负责ERP报表子系统的开发
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+

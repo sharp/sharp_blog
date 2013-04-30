@@ -10,6 +10,12 @@ h2 {
     line-height: 24px;
 }
 
+h4.border{
+    border-bottom: 1px solid #ccc;
+    clear: both;
+    margin-bottom: 10px;
+}
+
 code, pre {
     background-color: #EEEEEE;
     margin-bottom: 10px;
@@ -224,5 +230,9 @@ span.error
     background-image: none;
     width: 768px;
     padding: 20px;
+}
+
+#about-page .pull-left, #about-page .pull-right{
+    width: 368px;   
 }
 

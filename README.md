@@ -20,9 +20,9 @@ A Ruby on Rails blogging app for the fashionable developer
 
   bundle install         
 
-  rake db:create
+  bundle exec rake db:create
 
-  rake db:migrate
+  bundle exec rake db:migrate
 	
   rvmsudo rails s -p 80
 ```
