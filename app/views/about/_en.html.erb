@@ -1,0 +1,409 @@
+<h4 class='border'>Profile</h4>
+<div class='pull-left span'>
+  <p>
+    I am Sharp, one passion programmer from China, I love coding, opensource, and new techs, I hope to turn tech dreams into reality.I focus on making smart, efficient web applications or mobile app that are both easy-to-use and easy to manage. I also like to learn and share my skills in my spare time, and I finish one skill-share application myself: wekink.tv, You could try it if you have interest in learning.
+  </p>
+</div>
+<div class='pull-right span'>
+  <table class='table border'>  
+    <tbody>
+      <tr>
+        <td>Name</td>
+        <td>Sharp(liuqiang)(1985-07)</td>
+      </tr>
+      <tr>
+        <td>Work Time</td>
+        <td>2007－Now</td>
+      </tr>
+      <tr>
+        <td>Blog</td>
+        <td><%= link_to 'http://sharp.bz', 'http://sharp.bz' %></td>
+      </tr>
+      <tr>
+        <td>Email</td>
+        <td>liu19850701@gmail.com</td>
+      </tr>
+      <tr>
+        <td>Github</td>
+        <td>
+          <%= link_to 'https://github.com/SharpV', 'https://github.com/SharpV', target: '_blank' %>
+        </td>
+      </tr>
+      <tr>
+        <td>School</td>
+        <td>North China University of Electric Power (Software)</td>
+      </tr>
+    <tbody>
+  </table>
+</div>
+
+<h4 class='border'>Skill</h4>
+<div class='span pull-left'>
+  <table class='table border'>
+    <tbody>
+      <tr>
+        <td>Programming Language</td>
+        <td>Ruby Erlang Objc Javascript</td>
+      </tr>
+      <tr>
+        <td>
+          Client Side
+        </td>
+        <td>
+          Html5 Css jQuery Bootstrap CoffeeScript
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Database
+        </td>
+        <td>
+          Postgresql Mysql Riak Redis
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class='span pull-right'>
+  <table class='table border'>
+    <tbody>
+      <tr>
+        <td width='30'>Framework</td>
+        <td>Rails OTP CocoaTouch FFMpeg</td>
+      </tr>
+      <tr>
+        <td>
+          Networking
+        </td>
+        <td>
+          TCP/IP XMPP Http/Https RTMP HDS/HLS
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Tools
+        </td>
+        <td>
+          Gitlab Redmine Sublime Emacs MacOX Chef
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<h4 class='border'>Work Experience</h4>
+<div class='span pull-left'>
+  <table class='table border'>
+    <tbody>
+      <tr class="success">
+        <td width='60'>Project</td>
+        <td>Yunmao CableTV</td>
+      </tr>
+      <tr>
+        <td>
+          Company
+        </td>
+        <td>
+          ChinaEast
+        </td>
+      </tr>
+      <tr>
+        <td>Time</td>
+        <td>2012/09 - now</td>
+      </tr>
+      <tr>
+        <td>
+          Tech
+        </td>
+        <td>
+          Ruby Rails Erlang Postgresql Riak iOS Nginx FFMpeg
+        </td>
+      </tr>
+      <tr>
+        <td>
+         Introduction
+        </td>
+        <td>
+          Our cable project could help users to watch tv and other videos anywhere and anyscreen, I am the team leader of the project , I develop the operation backend system,  mainly the EPG module and video management module, I used nokogiri to fetch the EPG records from other site every day , and I used grade to finish json API service for our mobile app, and I used Riak to store videos, and I wrapped FFMPEG by ruby and convert videos to http live stream by sidekq, and I used JqueryFileUplaod to upload many large files.   Additionally I also finished the iOS app by objc https://itunes.apple.com/us/app/yun-maotv/id575111110?ls=1&mt=8
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class='span pull-right'>
+  <table class='table border'>
+    <tbody>
+      <tr class="success">
+        <td width='60'>Project</td>
+        <td>Cable Meeting System</td>
+      </tr>
+      <tr>
+        <td>
+          Company
+        </td>
+        <td>
+          ChinaEast
+        </td>
+      </tr>
+      <tr>
+        <td>Time</td>
+        <td>2012/03 - 2012/08</td>
+      </tr>
+      <tr>
+        <td>
+          Tech
+        </td>
+        <td>
+          C Ruby
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Introduction
+        </td>
+        <td>
+          We made use of the broadcast feature of cable network to  achieve online meeting sytem. The system is capture the video and audio stream of moderator, and send multicast stream to our gateway servers, and then we forward the stream to cable network. I develop the gateway system , I used ruby to register the  stream node and assign the nodes one certification, then all the node can login and send stream.  I pack my ruby code to  gem , so it's easy to install 
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class='clearfix'></div>
+<div class='span pull-left'>
+  <table class='table border'>
+    <tbody>
+      <tr class="success">
+        <td width='60'>Project</td>
+        <td>Cable Speeding System</td>
+      </tr>
+      <tr>
+        <td>
+          Company
+        </td>
+        <td>
+          China East
+        </td>
+      </tr>
+      <tr>
+        <td>Time</td>
+        <td>2010/10 - 2012/02</td>
+      </tr>
+      <tr>
+        <td>
+          Tech
+        </td>
+        <td>
+          C Ruby Redis
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Introduction
+        </td>
+        <td>
+          The CableSpeedingSytem's purpose is to raise the bandwidth for users, the principle is that user connect our VPN server then our VPN can send the response packets to users by both PPPoE network and cable network. The system has 2 parts:  server side and terminal side, I developed the sevrer side by Ruby and C, I used EventMachine to serve user access requests and save sessions to memcache, and I write one C program to forward packets to Cable network, this is the core logic .  Additionally I developed network management in order to make load balance when forwarding.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class='span pull-right'>
+  <table class='table border'>
+    <tbody>
+      <tr class="success">
+        <td width='60'>Project</td>
+        <td>ASICS Europe </td>
+      </tr>
+      <tr>
+        <td>
+          Company
+        </td>
+        <td>
+          ThePlant
+        </td>
+      </tr>
+      <tr>
+        <td>Time</td>
+        <td>2009/09 - 2010/09</td>
+      </tr>
+      <tr>
+        <td>
+          Tech
+        </td>
+        <td>
+          Ruby Rails jQuery
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Introduction
+        </td>
+        <td>
+          ASICS needs to manage 35 different country/language pairs, each with their own local contents, product databases, events, articles, store listings, and other region-specific information. To do this effectively they need decentralized control over website contents while maintaining centralized control of branding across all sites.
+Additionally they require the ability to tie in easily with other APIs including Google Maps, Flickr, Twitter and the flexibility to quickly add new campaigns and features that are identified through real-world usage. I developed the core features as core member, I finished the CMS subsystem,  product subsystem, event subsystem and email subsystem by Rails, Additionally I use redis to improve the performence of secrch and use google api to show store map.  Website: http://asics.eu/
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class='clearfix'></div>
+
+<div class='span pull-left'>
+  <table class='table border'>
+    <tbody>
+      <tr class="success">
+        <td width='60'>Project</td>
+        <td>E-learning Community</td>
+      </tr>
+      <tr>
+        <td>
+          Company
+        </td>
+        <td>
+          AuroraOnline
+        </td>
+      </tr>
+      <tr>
+        <td>Time</td>
+        <td>2009/06 - 2009/09</td>
+      </tr>
+      <tr>
+        <td>
+          Tech
+        </td>
+        <td>
+          Rails Mysql 
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Introduction
+        </td>
+        <td>
+          he SNS was very popular in 2009, so my company planned to develop one community for student, students can ask some questions,  share their posts and learn English. I am the leader of this project, and develop the frontend feature, includes webclass and group feature . the site url is http://community.xuexi6.com/
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class='span pull-right'>
+  <table class='table border'>
+    <tbody>
+      <tr class="success">
+        <td width='60'>Project</td>
+        <td>NT E-School</td>
+      </tr>
+      <tr>
+        <td>
+          Company
+        </td>
+        <td>
+          AuroraOnline
+        </td>
+      </tr>
+      <tr>
+        <td>Time</td>
+        <td>2008/09 - 2009/06</td>
+      </tr>
+      <tr>
+        <td>
+          Tech
+        </td>
+        <td>
+          Ruby Rails CMPP Oracle Flex
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Introduction
+        </td>
+        <td>
+          This system is one platform for  teachers and parents , teacher can manage the information of students, and send  the information to parents, these infomation includes the score, the notification, the assignment and so on.  I am the core developer in this system, and I finished the  worlflow engine for operation,  school subsystem,  the student subsystem and  message subsystem . I used Rails2.2,  Oracle, and  write one message gateway by C. The portal of system  is  http://www.ntjxt.com/ 
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class='clearfix'></div>
+
+<div class='span pull-left'>
+  <table class='table border'>
+    <tbody>
+      <tr class="success">
+        <td width='60'>Project</td>
+        <td>E-Teaching Weblog</td>
+      </tr>
+      <tr>
+        <td>
+          Company
+        </td>
+        <td>
+          AuroraOnline          
+        </td>
+      </tr>
+      <tr>
+        <td>Time</td>
+        <td>2007/12 - 2008/08</td>
+      </tr>
+      <tr>
+        <td>
+          Tech
+        </td>
+        <td>
+          Rails Mysql
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Introduction
+        </td>
+        <td>
+          This project is one bloging for teachers,  teachers can share their articles, files and images each other,  I developed this project with ruby on rails 2.0 ,  the database is mysql and I used memcache for active record for cache.  I did almost all the jobs in this project include UI. The site url is http://blog.ntjy.net/
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class='span pull-right'>
+  <table class='table border'>
+    <tbody>
+      <tr class="success">
+        <td width='60'>Project</td>
+        <td>WebERP</td>
+      </tr>
+      <tr>
+        <td>
+          Company
+        </td>
+        <td>
+          DMC
+        </td>
+      </tr>
+      <tr>
+        <td>Time</td>
+        <td>2007/07 - 2007/12</td>
+      </tr>
+      <tr>
+        <td>
+          Tech
+        </td>
+        <td>
+          Java Oracle
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Introduction
+        </td>
+        <td>
+          WebERP system is one Intranet ERP system for DMC inc,  In this system, I developed  Report submodule by Java and SQL, and I used Oracle as database.  
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
